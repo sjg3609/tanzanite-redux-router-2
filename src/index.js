@@ -6,7 +6,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import { Provider } from 'react-redux';
 
-const personName = (state = 'Chris', action) => {
+const personName = (state = '', action) => {
     // Always check the action.type before changing our value
     if (action.type === 'SET_PERSON_NAME') {
         // This changes the value of our reducer
@@ -25,7 +25,7 @@ const allPeople = (state = [], action) => {
     return state;
 }
 
-const activityType = (state = 'Walking', action) => {
+const activityType = (state = '', action) => {
     // Always check the action.type before changing our value
     if (action.type === 'SET_ACTIVITY_TYPE') {
         // This changes the value of our reducer

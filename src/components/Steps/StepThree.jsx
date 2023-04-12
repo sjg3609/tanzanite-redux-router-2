@@ -24,12 +24,14 @@ function StepThree() {
         }
     }
 
+    console.log('How many minutes:', minutes);
+
     return (
         <>
             <h3>Step Three</h3>
             <form onSubmit={nextPage}>
                 <label htmlFor="minutes">Minutes:</label><br />
-                <input id="minutes" value={minutes} onChange={handleChange} type="text" />
+                <input id="minutes" value={minutes} onChange={handleChange} type="number" />
                 <input type="submit" value="Next" />
             </form>
         </>

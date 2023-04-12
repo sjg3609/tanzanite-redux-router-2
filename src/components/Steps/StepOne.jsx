@@ -20,7 +20,8 @@ function StepOne() {
         dispatch(action);
     }
 
-    const nextPage = () => {
+    const nextPage = (event) => {
+        event.preventDefault();
         if (allPeople.length > 0) {
             history.push('/step-2');
         } else {

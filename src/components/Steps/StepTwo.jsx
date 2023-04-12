@@ -22,6 +22,9 @@ function StepTwo() {
             alert('Please add an activity type.');
         }
     }
+
+    console.log('Which activity was added:', activityType);
+
     return (
         <>
             <h3>Step Two</h3>
