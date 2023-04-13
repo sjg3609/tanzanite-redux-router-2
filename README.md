@@ -21,11 +21,11 @@ You will need to setup a table per the database.sql.
 - [x] Add React Router to the `App.jsx` with two routes
 - [x] Setup Redux in `index.js` with a reducer
 - [x] Add an input to a route and send data to our reducer
-- [ ] Navigate to the next page on click
-- [ ] Repeat the process for more inputs (could use more detail)
-- [ ] POST the data to our server on the last page of the form
+- [X] Navigate to the next page on click
+- [X] Repeat the process for more inputs (could use more detail)
+- [X] POST the data to our server on the last page of the form
 - [ ] Add Material UI
-- [ ] Display a list of past entries on a new route
+- [X] Display a list of past entries on a new route
 
 
 
