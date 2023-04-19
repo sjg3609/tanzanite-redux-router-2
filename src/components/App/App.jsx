@@ -7,11 +7,21 @@ import Review from '../Steps/Review.jsx';
 import ActivityList from '../ActivityList/ActivityList.jsx';
 import Container from '@mui/material/Container';
 import Header from '../Header/Header.jsx';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#D96941',
+    }
+  }
+});
 
 
 function App() {
 
   return (
+    <ThemeProvider theme={theme}>
     <div>
       <Router>
         <Header />
@@ -40,6 +50,7 @@ function App() {
         </Container>
       </Router>
     </div>
+    </ThemeProvider>
   );
 
 }
