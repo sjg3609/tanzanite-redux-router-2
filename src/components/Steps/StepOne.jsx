@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import ProgressBar from '../ProgressBar/ProgressBar.jsx';
 
 function StepOne() {
     const history = useHistory();
@@ -8,7 +9,7 @@ function StepOne() {
     // Input value comes from Redux (useSelector)
     const personName = useSelector(store => store.personName);
     const allPeople = useSelector(store => store.allPeople);
-    
+
     const handleChange = (event) => {
         const action = { type: 'SET_PERSON_NAME', payload: event.target.value };
         dispatch(action);
@@ -31,6 +32,7 @@ function StepOne() {
 
     return (
         <>
+            <ProgressBar currentStep={0} />
             <h3>Step One</h3>
             <form onSubmit={addPerson}>
                 <label htmlFor="person">Person:</label><br />

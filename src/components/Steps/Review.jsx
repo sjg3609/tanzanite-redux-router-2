@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import ProgressBar from '../ProgressBar/ProgressBar.jsx';
 
 
 function Review() {
@@ -21,7 +22,7 @@ function Review() {
             miles: miles,
         }).then((response) => {
             console.log(response);
-            dispatch({type: 'CLEAR_FORM'});
+            dispatch({ type: 'CLEAR_FORM' });
             history.push('/activity-list');
         }).catch((error) => {
             console.log(`Error in POST for submitData ${error}`);
@@ -31,14 +32,15 @@ function Review() {
 
     return (
         <>
+            <ProgressBar currentStep={4} />
             <h3>Review</h3>
             <div>
-                Name: {personName}<br/>
-                Activity Type: {activityType}<br/>
-                Minutes: {minutes}<br/>
-                Miles: {miles}<br/>
+                Name: {personName}<br />
+                Activity Type: {activityType}<br />
+                Minutes: {minutes}<br />
+                Miles: {miles}<br />
             </div>
-            <br/>
+            <br />
             <button onClick={submitData}>Submit</button>
         </>
     )

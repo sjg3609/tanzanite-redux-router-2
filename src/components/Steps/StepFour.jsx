@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import ProgressBar from '../ProgressBar/ProgressBar.jsx';
 
 
 function StepFour() {
@@ -28,11 +29,12 @@ function StepFour() {
 
     return (
         <>
+            <ProgressBar currentStep={3} />
             <h3>Step Four</h3>
             <form onSubmit={nextPage}>
-                <label htmlFor="miles">Miles</label><br/>
-                <input type="number" value={miles} onChange={handleChange}/>
-                <input type="submit" value="Next"/>
+                <label htmlFor="miles">Miles</label><br />
+                <input type="number" value={miles} onChange={handleChange} />
+                <input type="submit" value="Next" />
             </form>
         </>
     )
